@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Halloween</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎃 Halloween 🎃</h1>
+  </header>
+
+  <main>
+    <button id="guzik">Nie klikaj!</button>
+    <div id="overlay" class="hidden">
+	<span id="zamknij">&times;</span>
+      <img src="szkielet.gif" alt="Halloween gif">
+    </div>
+  </main>
+
+  <script>
+    const button = document.getElementById('guzik');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('zamknij');
+
+    button.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+    });
+
+    zamknij.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
